@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "enter filename1"
+read f1
+echo "enter filename2"
+read f2
+if test -e $f1 -a -e $f2
+then
+cat $f1 $f2>f3
+echo"file is:"
+cat f3
+else
+echo "file not found"
+f1
