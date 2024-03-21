@@ -1,0 +1,22 @@
+function reverse_number {
+local number=$1
+local reverse=0
+while (( number > 0 )); do
+reverse=$(( reverse * 10 + number % 10 ))
+number=$(( number / 10 ))
+done
+echo "$reverse"
+}
+echo "Enter a number:"
+read number
+result=$(reverse_number $number)
+echo "Reverse of $number: $result"
+
+output:
+mlm@mlm-desktop:~/Desktop/mkdir$ chmod +x reverse4.sh
+mlm@mlm-desktop:~/Desktop/mkdir$ ./reverse4.sh
+Enter a number:
+1234567890
+Reverse of 1234567890: 987654321
+mlm@mlm-desktop:~/Desktop/mkdir$ 
+
