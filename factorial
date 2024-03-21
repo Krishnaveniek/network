@@ -1,0 +1,14 @@
+echo "Enter a number:"
+read number
+factorial=1
+for (( i=1; i<=number; i++ )); do
+factorial=$(( factorial * i ))
+done
+echo "Factorial of $number: $factorial"
+
+output:mlm@mlm-desktop:~/Desktop/mkdir$ chmod +x factorial.sh
+mlm@mlm-desktop:~/Desktop/mkdir$ ./factorial.sh
+Enter a number:
+4
+Factorial of 4: 24
+mlm@mlm-desktop:~/Desktop/mkdir$ 
